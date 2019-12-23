@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Authors</title>
+</head>
+<body>
+	<table border="1 px solid-black">
+		<th>Name</th>
+		<th>Native</th>
+		<th>Country</th>
+		<th>Story</th>
+		<th>Title</th>
+		<th>Publication</th>
+
+		<tr>
+			<td class="name"></td>
+			<td class="nat"></td>
+			<td class="cnt"></td>
+			<td class="st"></td>
+			<td class="ti"></td>
+			<td class="pub"></td>
+		</tr>
+
+
+		<tr>
+			<td class="name"></td>
+			<td class="nat"></td>
+			<td class="cnt"></td>
+			<td class="st"></td>
+			<td class="ti"></td>
+			<td class="pub"></td>
+		</tr>
+	</table>
+	<br>
+	<div id="plain"></div>
+
+	<script type="text/javascript">
+		var authors=[
+		{
+			name:"Raj",
+			native:"IND",
+			country:"IND",
+			story:"Last Leaf",
+			title:"Hope",
+			pub:2002
+		},
+		{
+			name:"Ram",
+			native:"AUS",
+			country:"IND",
+			story:"Last",
+			title:"Hope",
+			pub:2009
+		},
+		{
+			name:"Messi",
+			native:"ARG",
+			country:"ARG",
+			story:"Barca",
+			title:"MESSI",
+			pub:2007
+		},
+		{
+			name:"Tom",
+			native:"NZ",
+			country:"IND",
+			story:"Run",
+			title:"Run",
+			pub:2008
+		}]
+		var n=document.querySelectorAll(".name");
+		var nat=document.querySelectorAll(".nat");
+		var cnt=document.querySelectorAll(".cnt");
+		var st=document.querySelectorAll(".st");
+		var ti=document.querySelectorAll(".ti");
+		var pub=document.querySelectorAll(".pub");
+
+		for (var i = 0; i < n.length; i++) {
+			n[0].innerHTML=authors[0].name;
+			nat[0].innerHTML=authors[0].native;
+			cnt[0].innerHTML=authors[0].country;
+			st[0].innerHTML=authors[0].story;
+			ti[0].innerHTML=authors[0].title;
+			pub[0].innerHTML=authors[0].pub;
+
+			n[1].innerHTML=authors[1].name;
+			nat[1].innerHTML=authors[1].native;
+			cnt[1].innerHTML=authors[1].country;
+			st[1].innerHTML=authors[1].story;
+			ti[1].innerHTML=authors[1].title;
+			pub[1].innerHTML=authors[1].pub;
+		}
+
+		var disp=document.getElementById("plain");
+		disp.innerHTML="Name:"+authors[2].name+ " Native:"+authors[2].native+ " Country:"+authors[2].country+ 
+		" Story:"+authors[2].story+ " Title:"+authors[2].title + " Pub:"+authors[2].pub;
+	</script>
+</body>
+</html>

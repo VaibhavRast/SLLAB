@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ATM</title>
+</head>
+<body>
+	<h1>Welcome To The ATM</h1>
+	<h3>{{msg}}</h3><br>
+	<h3>{{balance}}</h3><br>
+	<h2>{{cnt}}</h2>
+	<form action="{{url_for('index')}}" method="POST" id="atm">
+		<input type="number" name="amount"><br>
+		<input type="submit" name="action" value="withdraw" onclick="return validateForm(this)"><br>
+		<input type="submit" name="action" value="deposit" onclick="return validateForm(this)"><br>
+	</form>
+
+	<script>
+		var form=document.getElementById("atm");
+			function validateForm(b)
+			{
+				if(parseInt(form.amount.value)<0)
+				{
+					alert("Negative amount not allowed");
+					return false;
+				}
+				if(form.amount.value=="")
+				{
+					alert("Please enter amount");
+					return false;
+				}
+				if(b.value=="withdraw" && parseInt(form.amount.value)>5000)
+				{
+					alert("Can't withdraw more than 5000 at once");
+					return false;
+				}
+				return true;
+			}
+	</script>
+
+</body>
+</html>

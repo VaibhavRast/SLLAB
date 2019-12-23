@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student</title>
+</head>
+<body>
+ 
+    <h1>Registration Form</h1>
+    <p>
+        <h3> {{msg}} </h3>
+        <form action="{{url_for('register')}}" method="POST" id="reg" onsubmit="return validateForm()">
+            USN:<input type="text" name="usn"><br>
+            DOB:<input type="text" name="dob"><br>
+            M1:<input type="number" name="m1" min="0" max="100"><br>
+            M2:<input type="number" name="m2" min="0" max="100"><br>
+            M3:<input type="number" name="m3" min="0" max="100"><br>
+            <input type="submit" name="register">
+        </form>
+    </p>
+    <script type="text/javascript">
+            var form=document.querySelector("#reg");
+        function validateForm()
+        {
+            if (form.usn.value==""|| form.dob.value==""||form.m1.value==""||form.m2.value==""||form.m3.value=="")
+            {
+                alert("Please ensure all fields are filled");
+                return false;
+            }
+            else
+            return true;
+        }
+    
+    </script>
+
+  
+</body>
+</html>

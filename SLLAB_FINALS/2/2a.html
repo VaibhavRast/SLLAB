@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PURCHASE</title>
+</head>
+<body>
+    <input type="text" id="item" placeholder="Item Name"><br>
+
+    <select id="price">
+        <option>100</option>
+        <option>200</option>
+        <option>300</option>
+    </select><br>
+
+    <input type="number" id="qty" min="1"><br>
+    <button onclick="disp()">Total</button>
+    <button onclick="paid()">Paid</button><br>
+    Total Amount:<span id="res"></span>
+
+    <script type="text/javascript">
+        function disp(){
+            var a=document.querySelector("#price");
+            var price=a.options[a.selectedIndex].value;
+            var total=price*(document.querySelector("#qty").value);
+            document.querySelector("#res").innerHTML=total;
+        }
+
+        function paid(){
+            alert("Paid");
+        }
+        
+    </script>
+
+</body>
+</html>
