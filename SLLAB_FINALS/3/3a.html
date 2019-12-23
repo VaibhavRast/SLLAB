@@ -32,7 +32,19 @@
 		</tr>
 	</table>
 	<br>
-	<div id="plain"></div>
+			<span class="name"></span>
+			<span class="nat"></span>
+			<span class="cnt"></span>
+			<span class="st"></span>
+			<span class="ti"></span>
+			<span class="pub"></span><br>
+
+			<span class="name"></span>
+			<span class="nat"></span>
+			<span class="cnt"></span>
+			<span class="st"></span>
+			<span class="ti"></span>
+			<span class="pub"></span>
 
 	<script type="text/javascript">
 		var authors=[
@@ -76,24 +88,13 @@
 		var pub=document.querySelectorAll(".pub");
 
 		for (var i = 0; i < n.length; i++) {
-			n[0].innerHTML=authors[0].name;
-			nat[0].innerHTML=authors[0].native;
-			cnt[0].innerHTML=authors[0].country;
-			st[0].innerHTML=authors[0].story;
-			ti[0].innerHTML=authors[0].title;
-			pub[0].innerHTML=authors[0].pub;
-
-			n[1].innerHTML=authors[1].name;
-			nat[1].innerHTML=authors[1].native;
-			cnt[1].innerHTML=authors[1].country;
-			st[1].innerHTML=authors[1].story;
-			ti[1].innerHTML=authors[1].title;
-			pub[1].innerHTML=authors[1].pub;
+			n[i].innerHTML=authors[i].name;
+			nat[i].innerHTML=authors[i].native;
+			cnt[i].innerHTML=authors[i].country;
+			st[i].innerHTML=authors[i].story;
+			ti[i].innerHTML=authors[i].title;
+			pub[i].innerHTML=authors[i].pub;
 		}
-
-		var disp=document.getElementById("plain");
-		disp.innerHTML="Name:"+authors[2].name+ " Native:"+authors[2].native+ " Country:"+authors[2].country+ 
-		" Story:"+authors[2].story+ " Title:"+authors[2].title + " Pub:"+authors[2].pub;
 	</script>
 </body>
 </html>
