@@ -2,7 +2,7 @@ class Student():
 	"""docstring for Student"""
 	def __init__(self):
 		self.name=""
-		self.age=""
+		self.age=0
 		self.marks=[]
 
 	def display(self):
